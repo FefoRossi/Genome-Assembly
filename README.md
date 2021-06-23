@@ -3,13 +3,13 @@
 ### The script "pipeline_assembly" runs and automated pipeline for bacterial genome assembly with five (Mira, Spades, DiscovarDeNovo, A5 pipeline, Masurca) different genome assemblers. 
 #### The script create a folder "outputs_assembly" where all final assemblys are stored.
 #### To install each tool please refer to each documentation:
-#### MIRA -->  https://github.com/bachev/mira
-#### Spades --> https://github.com/ablab/spades
-#### DiscovarDeNovo --> https://anaconda.org/bioconda/discovardenovo
-#### A5 pipeline --> https://sourceforge.net/p/ngopt/wiki/A5PipelineREADME/
-#### Masurca --> https://github.com/alekseyzimin/masurca
-#### Quast --> http://quast.sourceforge.net/docs/manual.html#sec1
-#### Metassembler --> https://github.com/biol7210-genomes/assemblers/blob/master/metassembler.md
+#### `MIRA` -->  https://github.com/bachev/mira
+#### `Spades` --> https://github.com/ablab/spades
+#### `DiscovarDeNovo` --> https://anaconda.org/bioconda/discovardenovo
+#### `A5 pipeline` --> https://sourceforge.net/p/ngopt/wiki/A5PipelineREADME/
+#### `Masurca` --> https://github.com/alekseyzimin/masurca
+#### `Quast` --> http://quast.sourceforge.net/docs/manual.html#sec1
+#### `Metassembler` --> https://github.com/biol7210-genomes/assemblers/blob/master/metassembler.md
 ### Python dependencies:
 #### Pandas
 #### Os
