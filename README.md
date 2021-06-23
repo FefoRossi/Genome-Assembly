@@ -14,7 +14,7 @@
 #### Pandas
 #### Os
 #### sys
-### To run the script: bash pipeline_assembly /path/to/read1 /path/to/read2 prefix_for_assembly
+### To run the script: ```bash pipeline_assembly /path/to/read1 /path/to/read2 prefix_for_assembly```
 ### After all assemblys are done run the metassembler_pipeline.py python script inside the "outputs_assembly" as such: 
-### python3 meatssembler_pipeline.py /path/to/read1 /path/to/read2
+### ```python3 meatssembler_pipeline.py /path/to/read1 /path/to/read2```
 #### This python scripts runs Quast for all 5 assemblys and generate the Metassemble tool configuration file with all 5 assemblys sorted in order of N50 value, from higher N50 value (less fragmented genomes) to lower N50 values.
