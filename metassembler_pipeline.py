@@ -84,7 +84,7 @@ print("Metassembler file done")
 
 
 #Run metassembler
-os.system(" metassemble --conf metassembler-config.txt --outd teste > log.out")
+os.system("metassemble --conf metassembler-config.txt --outd teste > log.out")
 print("Metassembly DONE! \nFor any errors please check the 'log.out' file")
 
 
