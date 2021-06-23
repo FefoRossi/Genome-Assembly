@@ -6,9 +6,7 @@
 
 import pandas as pd
 import os
-import sys, getopt
-import argparse
-
+import sys
 
 # In[32]:
 
@@ -42,7 +40,7 @@ quast.sort_values(by="N50", ascending=False,inplace=True)
 print("The file order by N50 is: ", [x+".fasta" for x in quast["Assembly"].values.tolist()])
 
 
-# In[33]:
+# In[41]:
 
 
 #generating fixed part of file
@@ -53,7 +51,7 @@ variable_list = [["[global]\n"],["bowtie2_read1="+read1+"\n"], ["bowtie2_read2="
                "mateAn_s=250"+"\n"]]
 
 
-# In[34]:
+# In[42]:
 
 
 #concatenating with variable part of file
@@ -61,9 +59,9 @@ assembly_count = 1
 genomes = quast["Assembly"].values.tolist()
 for assembly in range(0, len(genomes)):
     #print(assembly_count, genomes[assembly]+".fasta")
-    variable_list.append(["["+str(assembly_count)+"]\n","fasta="+genomes[assembly]+".fasta\n","ID="+genomes[assembly]+"\n"])
+    variable_list.append(["["+str(assembly_count)+"]\n","fasta="+str(os.path.abspath(genomes[assembly]+".fasta"))+"\n","ID="+genomes[assembly]+"\n"])
     assembly_count+=1
-#print(variable_list)
+print(variable_list)
 
 
 # In[36]:
@@ -80,6 +78,14 @@ with open("metassembler_out/metassembler-config.txt", "w") as meta:
 
 
 print("Metassembler file done")
+
+
+# In[2]:
+
+
+#Run metassembler
+os.system(" metassemble --conf metassembler-config.txt --outd teste > log.out")
+print("Metassembly DONE! \nFor any errors please check the 'log.out' file")
 
 
 # In[ ]:
